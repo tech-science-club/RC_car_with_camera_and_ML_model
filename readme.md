@@ -45,10 +45,11 @@ Recomended to use adaptor to avoid misconneption with 5v instead of 3.3v.
 
 Straitforward design with Arduino nano board, 2 joysticks for x and y representation and radio module to  
 transmit data.
-![transmitter](transmitter_pics/transmitter.jpg)
-<img src="transmitter_pics/transmitter.jpg" alt="Alt text" style="width: 50%;"/>
 
-![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.jpg)  
+<img src="transmitter_pics/transmitter.jpg" alt="Alt text" style="width: 70%;"/>
+
+
+<img src="/transmitter_pics/vehicle_transmitter.jpg" alt="Alt text" style="width: 70%;"/>
 
 ### Receiver
 
@@ -58,9 +59,10 @@ and pass values to servo (stearing control access data from y-transmitter-joysti
 More over, here was established the UART connection between raspberry Pi4 and atmega2560, Serial1 is assigned. 
 Also was embedded ultrasonic distance sensor to stop car in obstacles cases.
 
-![car](reciever_pics/car.jpg)
 
-![rpi4_atmega_on_wheels](reciever_pics/rpi4_atmega_on_wheels.png)
+<img src="reciever_pics/car.jpg" alt="Alt text" style="width: 70%;"/>
+
+<img src="reciever_pics/rpi4_atmega_on_wheels.png" alt="Alt text" style="width: 70%;"/>
 
 ### Train ML learning model with TensorFlow, Yolo, Edge Impulse
 

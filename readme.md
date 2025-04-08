@@ -45,6 +45,7 @@ Recomended to use adaptor to avoid misconneption with 5v instead of 3.3v.
 
 Straitforward design with Arduino nano board, 2 joysticks for x and y representation and radio module to  
 transmit data.
+![transmitter](transmitter_pics/transmitter.jpg)
 
 ![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.jpg)  
 
@@ -55,6 +56,8 @@ and pass values to servo (stearing control access data from y-transmitter-joysti
 (x data from transmitter).
 More over, here was established the UART connection between raspberry Pi4 and atmega2560, Serial1 is assigned. 
 Also was embedded ultrasonic distance sensor to stop car in obstacles cases.
+
+![car](reciever_pics/car.jpg)
 
 ![rpi4_atmega_on_wheels](reciever_pics/rpi4_atmega_on_wheels.png)
 
@@ -103,6 +106,12 @@ Initially has been tryed to use struct lib and pass data as struct packages, but
 work in that way, was used transmitting as string, it worked pretty well.
 There was an issue with servoes jitter, connected to the RPI4. It was solved with usage of  
 gpiozero library.
+
+### Result is here on video:
+
+[![Watch the video](https://img.youtube.com/vi/I8UdSLM6D9M/0.jpg)](https://www.youtube.com/watch?v=I8UdSLM6D9M)
+
+
 
 
 

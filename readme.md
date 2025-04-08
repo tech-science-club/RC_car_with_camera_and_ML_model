@@ -12,7 +12,7 @@ List of materials:
  - Arduino Mega 2560
  - L298N motors driver
  - servos s90g
- - radio module nRF01L+LNA
+ - radio module nRF24L01+LNA, 2.4 GHz
  - Arduino nano
  - Arduino joystick
  - Raspberry Pi4, 2 Gb RAM, Debian 12/64
@@ -41,14 +41,14 @@ Recomended to use adaptor to avoid misconneption with 5v instead of 3.3v.
 
 ![nrf2401l](nRF01L_pics/nrf2401l.jpg)  
 
-### transmitter
+### Transmitter
 
 Straitforward design with Arduino nano board, 2 joysticks for x and y representation and radio module to  
 transmit data.
 
-![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.png)  
+![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.jpg)  
 
-### receiver
+### Receiver
 
 More complicated due to variety of tasks. Atmega 2560 has to receive a data from transmitter, process it  
 and pass values to servo (stearing control access data from y-transmitter-joystick) and to wheels  
@@ -58,29 +58,29 @@ Also was embedded ultrasonic distance sensor to stop car in obstacles cases.
 
 ![rpi4_atmega_on_wheels](reciever_pics/rpi4_atmega_on_wheels.png)
 
-### train ML learning model with TensorFlow, Yolo, Edge Impulse
+### Train ML learning model with TensorFlow, Yolo, Edge Impulse
 
 The best result for performance was achieved with edgeimpulse. Minimum latency, ~ 15 fps, in that same time  
 with yolov5.tflite model was achieved above ~ 1fps.
-To train model with Tensorflow was unsuccessful due to its dependencies incompatibility, confused documentation  
+To train model with Tensorflow was unsuccessful due to its dependencies incompatibility, confused documentation 
 regarding edge devices.
 
-### test opencv lib on pc with C++
+### Test opencv lib on pc with C++
 To make a test with OpenCV lib and C++ was written a straightforward script which reads off video from  
 laptop webcam, processes it with opencv and haardcascade face recognition and pass data via serial communication  
 to arduino board to move servoes. 
 
-### move opencv to raspberry Pi4
+### Move opencv to raspberry Pi4
 
 It is possible to use python based opencv lib and C++ lib. 
 Easier way is with python. First of all, opencv lib originally is written on C++, python lib is just a bridge,  
 way to use it in python projects. Secondly, The speed of all process is being determinated with image processing,
 that related of hardware performance.
 
-### connect raspberry Pi4 with peripheries
+### Connect raspberry Pi4 with peripheries
 It is possible with enabling of hardware gpio pins and uart communication in raspi-config
 
-### train and deploy Edge impulse model on raspberry Pi4
+### Train and deploy Edge impulse model on raspberry Pi4
 There is well organized documentation and guidance on Edge Impulse web page. 
 Just follow their instruction how to do everything step by step. There are possibilities to collect data,  
 train model directly on their server and check it performance directly with web browser on mobile, laptop  
@@ -90,7 +90,7 @@ A link to the Edge Impulse guidance is [here](https://docs.edgeimpulse.com/docs/
 .
 How to deploy ML model on the Raspberry Pi4 board is well described [here](https://docs.edgeimpulse.com/docs/edge-ai-hardware/cpu/raspberry-pi-4)
 
-### test the car for bugs
+### Test the car for bugs
 Deploying on raspberry Pi4 board occurs as it is described on their documentation. Script downloads sdk for  
 python together with ML model.
 Among generated py files there is file classify.py which is responsible for object recognition and classification

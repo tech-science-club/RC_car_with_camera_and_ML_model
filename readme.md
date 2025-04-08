@@ -109,7 +109,7 @@ gpiozero library.
 
 ### Result is here on video:
 
-[![Watch the video](https://img.youtube.com/vi/I8UdSLM6D9M/0.jpg)](https://www.youtube.com/watch?v=I8UdSLM6D9M)
+[![video](https://img.youtube.com/vi/I8UdSLM6D9M/0.jpg)](https://www.youtube.com/watch?v=I8UdSLM6D9M)
 
 
 

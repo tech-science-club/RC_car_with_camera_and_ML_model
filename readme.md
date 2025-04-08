@@ -46,7 +46,7 @@ Recomended to use adaptor to avoid misconneption with 5v instead of 3.3v.
 Straitforward design with Arduino nano board, 2 joysticks for x and y representation and radio module to  
 transmit data.
 
-![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.png)  
+![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.jpg)  
 
 ### receiver
 

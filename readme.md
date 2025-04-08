@@ -65,10 +65,6 @@ with yolov5.tflite model was achieved above ~ 1fps.
 To train model with Tensorflow was unsuccessful due to its dependencies incompatibility, confused documentation  
 regarding edge devices.
 
-A link to the Edge Impulse guidance is [here](https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/computer-vision/object-detection/detect-objects-using-fomo)
-.
-
-
 ### test opencv lib on pc with C++
 To make a test with OpenCV lib and C++ was written a straightforward script which reads off video from  
 laptop webcam, processes it with opencv and haardcascade face recognition and pass data via serial communication  
@@ -90,6 +86,9 @@ Just follow their instruction how to do everything step by step. There are possi
 train model directly on their server and check it performance directly with web browser on mobile, laptop  
 via internet having not downloaded it.
 But it is paid service, is free for small size projects
+A link to the Edge Impulse guidance is [here](https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/computer-vision/object-detection/detect-objects-using-fomo)
+.
+How to deploy ML model on the Raspberry Pi4 board is well described [here](https://docs.edgeimpulse.com/docs/edge-ai-hardware/cpu/raspberry-pi-4)
 
 ### test the car for bugs
 Deploying on raspberry Pi4 board occurs as it is described on their documentation. Script downloads sdk for  

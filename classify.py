@@ -31,12 +31,7 @@ servo_y = Servo(23,
 
 #------------ asign servo func --------------------
 def servos(x,y):
-    # if x/2 and y/2 >= 48:
-        # servo_x.value = -1*(1 - x/48)
-        # servo_y.value = -1*(1 - y/48)
-    # else:
-        # servo_x.value = -1*(x/48 - 1)
-        # servo_y.value = -1*(y/48 - 1)
+
     if x/2 and y/2 >= 48:
         servo_x.value = -0.25*x/48
         servo_y.value = -0.25*y/48
@@ -160,13 +155,7 @@ def main(argv):
                     x = bb[0]['x']
                     y = bb[0]['y']
                     servos(x, y)
-                    
-                    #data_package = struct.pack('ii', x, y)
-                    #data_package = f"{x*1023/96}/{y*1023/96}"
-                    #serial_communication.write(data_package)
-                    #print(data_package)
                     serial_communication.write(f"{x*1023/96},{y*1023/96}\n".encode())
-                    #serial_communication.write(data_package)
 
                 if (show_camera):
                     cv2.imshow('edgeimpulse', cv2.cvtColor(img, cv2.COLOR_RGB2BGR))

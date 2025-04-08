@@ -1,4 +1,4 @@
-// Arduino pin numbers
+// this code is an example how to use nRF24L01 as transmitter
 
 #include "SPI.h"
 #include "RF24.h"
@@ -62,7 +62,7 @@ void loop() {
 
   Serial.println("*---------------------*");
 
-  
+  /*---------------------to see output uncomment bellow---------------------------------*/
 
   /*Serial.print("Switch:  ");
   Serial.print(digitalRead(SW_pin));
@@ -75,9 +75,4 @@ void loop() {
   Serial.println(" | ");*/
   delay(50);
 }
-
-
-
-//NRF24L01 buffer limit is 32 bytes (max struct size)
-
 

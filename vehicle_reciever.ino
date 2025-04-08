@@ -1,4 +1,6 @@
 
+//process incoming data from nRF24L01
+
 #include "SPI.h"
 #include "RF24.h"
 #include "nRF24L01.h"
@@ -46,15 +48,7 @@ struct payload {
   int y;
 };
 
-// does not work with automomous func implementation
-// struct rpi_data {
-//   int x_axes;
-//   int y_axes;
-// };
-
 payload payload;
-
-//rpi_data rpi_package;
 
 void setup() {
   myservo.attach(8);
@@ -97,6 +91,7 @@ void setup() {
   Serial.begin(9600);
   Serial1.begin(9600);
 }
+
 void loop() {
   
   
@@ -225,8 +220,6 @@ void data_from_rpi (){
       Serial.print("Serial1 data: ");
       Serial.print(data);
       Serial.println(Serial1.available());
-      //Serial.print("Serial rpi is available cm: ");
-      //Serial.println(cm);
   }
 
   

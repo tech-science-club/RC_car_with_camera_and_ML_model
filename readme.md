@@ -37,11 +37,16 @@ the is troubleshooting paragraph.
 Recommended to solder capacitor to 5V and gnd pins on radio module to reduce noice
 Recommended to check radio space for radio noice source (microwave, mobile, bt, wifi devices)  
 and set right channel for broadcast.
+Recomended to use adaptor to avoid misconneption with 5v instead of 3.3v.
+
+![nrf2401l](nRF01L_pics/nrf2401l.jpg)  
 
 ### transmitter
 
 Straitforward design with Arduino nano board, 2 joysticks for x and y representation and radio module to  
 transmit data.
+
+![vehicle_transmitter](/transmitter_pics/vehicle_transmitter.png)  
 
 ### receiver
 
@@ -51,17 +56,23 @@ and pass values to servo (stearing control access data from y-transmitter-joysti
 More over, here was established the UART connection between raspberry Pi4 and atmega2560, Serial1 is assigned. 
 Also was embedded ultrasonic distance sensor to stop car in obstacles cases.
 
+![rpi4_atmega_on_wheels](reciever_pics/rpi4_atmega_on_wheels.png)
+
 ### train ML learning model with TensorFlow, Yolo, Edge Impulse
 
 The best result for performance was achieved with edgeimpulse. Minimum latency, ~ 15 fps, in that same time  
 with yolov5.tflite model was achieved above ~ 1fps.
 To train model with Tensorflow was unsuccessful due to its dependencies incompatibility, confused documentation  
-regarding edge devices
+regarding edge devices.
+
+A link to the Edge Impulse guidance is [here](https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/computer-vision/object-detection/detect-objects-using-fomo)
+.
+
 
 ### test opencv lib on pc with C++
 To make a test with OpenCV lib and C++ was written a straightforward script which reads off video from  
 laptop webcam, processes it with opencv and haardcascade face recognition and pass data via serial communication  
-to arduino board to move servoes.  
+to arduino board to move servoes. 
 
 ### move opencv to raspberry Pi4
 

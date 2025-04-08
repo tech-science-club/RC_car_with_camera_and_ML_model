@@ -112,7 +112,8 @@ There was an issue with servo jitter when connected to the RPi 4. This was solve
 
 [![video](https://img.youtube.com/vi/I8UdSLM6D9M/0.jpg)](https://www.youtube.com/watch?v=I8UdSLM6D9M)
 
-View from raspberry Pi4
+View from raspberry Pi4  
+
 [![video](https://img.youtube.com/vi/vrmn5sfN3jk/0.jpg)](https://www.youtube.com/watch?v=vrmn5sfN3jk)
 
 
